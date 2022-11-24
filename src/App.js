@@ -15,6 +15,7 @@ function App() {
   useEffect(() => {
     canvasRef.current.width = window.innerWidth
     canvasRef.current.height = window.innerHeight
+    clear();
 
     const globalMouseMove = (e) => {
       setCoords({x: e.clientX - canvasRef.current.offsetLeft, y: e.clientY - canvasRef.current.offsetTop})
@@ -31,6 +32,7 @@ function App() {
   }, [])
 
   const clear = () => {
+    console.log("CLEAR")
     const ctx = canvasRef.current.getContext("2d");
     ctx.fillStyle = "#ffffff";
     ctx.fillRect(0, 0, canvasRef.current.width, canvasRef.current.height)

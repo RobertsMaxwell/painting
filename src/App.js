@@ -20,7 +20,13 @@ function App() {
       setCoords({x: e.clientX - canvasRef.current.offsetLeft, y: e.clientY - canvasRef.current.offsetTop})
     }
 
+    const resizeCanvas = (e) => {
+      canvasRef.current.width = window.innerWidth
+      canvasRef.current.height = window.innerHeight
+    }
+
     window.addEventListener("mousemove", globalMouseMove)
+    window.addEventListener("resize", resizeCanvas)
   }, [])
 
   const clear = () => {

@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html {
+  overflow: hidden;
+}
+
+.closed_menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: flex-end;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.opt_head .min {
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.opt_head .max {
+  display: flex;
+  margin-left: calc(100% - 60px);
+  align-items: center;
+  position: absolute;
+  transform: rotate(180deg);
+}
+
+.opt_head .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.opt_head {
+  margin-bottom: 5px;
+  padding: 20px;
+}
+
+.menu .util {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+  margin-top: 10px;
+}
+
+.util button:hover {
+  cursor: pointer;
+  background-color: #F2F2F2;
+}
+
+.util button {
+  height: 3rem;
+  width: 6rem;
+  font-size: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+.opt div input {
+  width: 100px;
+  margin: auto;
+}
+
+.opt div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.menu .opt {
+  display: flex;
+  row-gap: 10px;
+  height: 1rem;
+  padding: 30px;
+  color: #434242;
+  font-weight: 600;
+}
+
+.opt input:hover {
+  cursor: pointer;
+}
+
+.menu .opt:hover {
+  color: black;
+  background-color: #F2F2F2;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  touch-action: none;
+}
+
+.canvas {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  border: 2px solid black;
+}
+
+.open {
+  animation: open-menu 1000ms 1;
+  animation-fill-mode: forwards;
+}
+
+.close {
+  animation: close-menu 1000ms 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes close-menu {
+  0% {
+    transform: none
+  }
+  100% {
+    transform: translateX(-90%);
+  }
+}
+
+@keyframes open-menu {
+  0% {
+    transform: translateX(-90%);
+  }
+  100% {
+    transform: none
+  }
+}

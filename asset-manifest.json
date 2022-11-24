@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/RobertsMaxwell.github.io/painting/static/css/main.3c078049.css",
-    "main.js": "/RobertsMaxwell.github.io/painting/static/js/main.f6b64781.js",
-    "index.html": "/RobertsMaxwell.github.io/painting/index.html",
-    "main.3c078049.css.map": "/RobertsMaxwell.github.io/painting/static/css/main.3c078049.css.map",
-    "main.f6b64781.js.map": "/RobertsMaxwell.github.io/painting/static/js/main.f6b64781.js.map"
+    "main.css": "./static/css/main.3c078049.css",
+    "main.js": "./static/js/main.f6b64781.js",
+    "index.html": "./index.html",
+    "main.3c078049.css.map": "./static/css/main.3c078049.css.map",
+    "main.f6b64781.js.map": "./static/js/main.f6b64781.js.map"
   },
   "entrypoints": [
     "static/css/main.3c078049.css",

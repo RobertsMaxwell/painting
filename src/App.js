@@ -12,9 +12,6 @@ function App() {
   const canvasRef = useRef(null)
   const lastDrawRef = useRef(null)
 
-  const d = new Date();
-  let lastT = d.getTime();
-
   useEffect(() => {
     canvasRef.current.width = window.innerWidth
     canvasRef.current.height = window.innerHeight
@@ -58,7 +55,6 @@ function App() {
       ctx.lineWidth = 1
     }
 
-    console.log("DRAW")
     ctx.beginPath()
     ctx.arc(x, y, drawWidth / 2, 0, 360)
     ctx.fill()
@@ -81,8 +77,6 @@ function App() {
         }
       }}
       onTouchMove={e => {
-        console.log(d.getTime() - lastT)
-        lastT = d.getTime()
         const touch = e.touches[0]
         draw(touch.clientX, touch.clientY, lastDrawRef)
       }}

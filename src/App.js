@@ -23,6 +23,7 @@ function App() {
     const resizeCanvas = (e) => {
       canvasRef.current.width = window.innerWidth
       canvasRef.current.height = window.innerHeight
+      clear();
     }
 
     window.addEventListener("mousemove", globalMouseMove)

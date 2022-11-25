@@ -8,6 +8,76 @@ html {
   overflow: hidden;
 }
 
+.info {
+  position: absolute;
+  width: 30px;
+  padding: 5px;
+  margin-left: calc(100vw - 42px - 15px);
+  margin-top: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 30px;
+}
+
+.popup_container {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .6);
+  z-index: 1;
+}
+
+.popup_content .sign {
+  width: 100%;
+  text-align: center;
+}
+
+.popup_content p {
+  font-size: 20px;
+}
+
+.popup_content .main_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 75%;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.popup .close_button {
+  height: 32px;
+  z-index: 10;
+  margin-left: auto;
+  margin-bottom: auto;
+}
+
+.popup .popup_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 40px;
+  position: absolute;
+  width: 600px;
+  height: 400px;
+}
+
+.popup {
+  display: flex;
+  background-color:white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px;
+  height: 400px;
+}
+
 .closed_menu {
   display: flex;
   flex-direction: column;
@@ -27,6 +97,7 @@ html {
   flex-direction: column;
   position: absolute;
   background-color: white;
+  z-index: 0;
   width: 300px;
   height: 300px;
   margin: 20px;
